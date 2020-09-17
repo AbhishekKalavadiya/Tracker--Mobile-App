@@ -1,5 +1,6 @@
 const express = require('express')
 const helmet = require('helmet')
+const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
@@ -19,6 +20,7 @@ mongoose.connect('mongodb+srv://user:tracker01@cluster0.6c6x4.mongodb.net/Cluste
     console.log("DB Connected Successfully");
 })
 
+app.use(cors())
 app.use(helmet())
 app.use(morgan('common'))
 app.use(bodyParser.json())
