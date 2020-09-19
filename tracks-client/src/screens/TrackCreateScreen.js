@@ -5,6 +5,7 @@ import {SafeAreaView , withNavigationFocus} from 'react-navigation'
 import Map from '../components/Map'
 import { Text } from 'react-native-elements'
 import TrackForm from '../components/TrackForm'
+import { FontAwesome } from "@expo/vector-icons"
 
 function TrackCreateScreen({ isFocused }) {
 
@@ -12,7 +13,6 @@ function TrackCreateScreen({ isFocused }) {
 
     return (
         <SafeAreaView forceInset={{ top: 'always'}} >
-            <Text h3>Create a Track </Text>
             <Map />
             {
                 err ?<Text>Please allow the location permissions</Text> :null
@@ -20,6 +20,11 @@ function TrackCreateScreen({ isFocused }) {
             <TrackForm />
         </SafeAreaView>
     )
+}
+
+TrackCreateScreen.navigationOptions = {
+    title: 'Add Track',
+    tabBarIcon: <FontAwesome name="plus" size={20}/>
 }
 
 const styles = StyleSheet.create({

@@ -7,8 +7,6 @@ const Map = () => {
 
     const [{ locationProvider } , dispatch] = useStateView()
     const { currentLocation, locations } = locationProvider
-    // const { latitude, longitude } = currentLocation.coords
-    // console.log(currentLocation.coords)
     
     if( !locationProvider ){
         console.log('hi tehre')

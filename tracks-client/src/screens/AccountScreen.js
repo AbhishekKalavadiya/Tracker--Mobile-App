@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import { useStateView } from '../context/StateProvider'
 import { navigate } from '../navigationRef'
 import { SafeAreaView } from 'react-navigation'
+import { FontAwesome } from "@expo/vector-icons"
 
 function AccountScreen() {
 
@@ -20,7 +21,7 @@ function AccountScreen() {
     }
 
     return (
-        <SafeAreaView>
+        <SafeAreaView forceInset={{ top: 'always'}}>
             <Text style={styles.textStyle}>Account Screen </Text>
             <Button 
                 title="Sign Out" 
@@ -30,6 +31,11 @@ function AccountScreen() {
             
         </SafeAreaView>
     )
+}
+
+AccountScreen.navigationOptions ={
+    title: "Account",
+    tabBarIcon: <FontAwesome name="gear" size={20} />
 }
 
 const styles = StyleSheet.create({

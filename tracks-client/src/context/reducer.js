@@ -71,6 +71,20 @@ const reducer = (state, action) => {
                     name: action.payload
                 }
             }
+        case "RESET":
+            return {
+                ...state,
+                locationProvider: {
+                    ...state.locationProvider,
+                    name: '',
+                    locations: []
+                }
+            }
+        case "FETCHED_TRACKS":
+            return {
+                ...state,
+                trackedLocations: action.payload
+            }
         default :
             return state
     }

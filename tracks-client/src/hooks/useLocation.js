@@ -1,6 +1,6 @@
 import {useState, useEffect, useCallback} from 'react'
 import {  requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-location'
-import '../_mockLocation'
+// import '../_mockLocation'
 import { useStateView } from '../context/StateProvider'
 
 export default (shouldTrack) => {

@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React from 'react'
 import { Input } from 'react-native-elements'
 import { StyleSheet,Button, View } from 'react-native'
 import { useStateView } from '../context/StateProvider'
